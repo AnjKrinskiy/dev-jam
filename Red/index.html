@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Red</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Rokkitt:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--Sprite-->
+<svg style="display: none;">
+<symbol id="twitter" viewBox="0 0 612 612">
+    <g>
+        <path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+        c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+        c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+        c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+        c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+        c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+        c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"/>
+    </g>
+</symbol>
+<symbol id="dribbble" viewBox="0 0 438.533 438.533">
+    <g>
+        <path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0
+        c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267
+        c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407
+        s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062
+        C438.533,179.485,428.732,142.795,409.133,109.203z M219.27,31.977c47.201,0,88.41,15.607,123.621,46.82l-3.569,4.993
+        c-1.427,2.002-4.996,5.852-10.704,11.565c-5.709,5.708-11.943,11.136-18.699,16.274c-6.762,5.14-15.94,10.992-27.555,17.559
+        c-11.611,6.567-23.982,12.328-37.117,17.276c-21.887-40.355-45.296-76.709-70.231-109.064
+        C190.055,33.784,204.805,31.977,219.27,31.977z M72.524,103.06c18.271-23.026,40.537-40.73,66.806-53.1
+        c23.601,31.405,46.82,67.381,69.662,107.921c-57.862,15.227-115.532,22.841-173.014,22.838
+        C42.072,151.98,54.253,126.091,72.524,103.06z M44.54,286.794c-8.376-21.412-12.563-43.923-12.563-67.527
+        c0-2.666,0.098-4.665,0.286-5.996c68.905,0,132.955-8.848,192.149-26.553c6.092,11.8,11.136,22.364,15.133,31.693
+        c-0.771,0.38-1.999,0.806-3.713,1.283c-1.719,0.476-2.953,0.806-3.721,0.999l-10.561,3.711
+        c-7.236,2.666-16.708,7.235-28.409,13.703c-11.704,6.478-24.123,14.182-37.257,23.13c-13.134,8.949-26.696,20.797-40.684,35.553
+        c-13.99,14.75-25.743,30.591-35.26,47.53C64.713,327.381,52.914,308.2,44.54,286.794z M219.27,406.56
+        c-44.54,0-84.32-14.277-119.343-42.825l4.283,3.142c6.661-14.66,16.462-28.746,29.408-42.257
+        c12.944-13.511,25.41-24.413,37.401-32.695c11.991-8.274,25.028-16.077,39.115-23.414c14.084-7.323,23.691-11.991,28.835-13.983
+        c5.14-1.998,9.233-3.572,12.278-4.716l0.568-0.287h0.575c18.647,48.916,31.977,96.313,39.968,142.184
+        C268.756,401.611,244.397,406.557,219.27,406.56z M376.876,320.479c-14.086,21.796-31.696,39.834-52.817,54.104
+        c-7.81-43.776-19.985-88.415-36.549-133.902c37.877-5.907,76.8-3.142,116.771,8.274
+        C400.092,274.841,390.955,298.687,376.876,320.479z M403.706,216.698c-1.903-0.378-4.285-0.81-7.139-1.283
+        c-2.854-0.473-6.331-1.047-10.424-1.713c-4.087-0.666-8.662-1.283-13.702-1.855c-5.045-0.571-10.421-1.093-16.136-1.569
+        c-5.708-0.478-11.8-0.855-18.268-1.143c-6.479-0.284-13.042-0.428-19.705-0.428c-6.656,0-13.657,0.193-20.981,0.571
+        c-7.326,0.375-14.414,1.049-21.265,1.999c-0.575-0.953-1.287-2.524-2.143-4.714c-0.855-2.187-1.479-3.855-1.848-4.997
+        c-3.621-7.994-7.81-17.036-12.573-27.121c13.134-5.333,25.652-11.469,37.555-18.418c11.892-6.949,21.402-13.131,28.544-18.555
+        c7.139-5.43,13.895-11.188,20.27-17.277c6.379-6.09,10.513-10.323,12.423-12.703c1.906-2.384,3.713-4.714,5.424-6.995l0.287-0.288
+        c27.788,33.88,41.974,72.897,42.538,117.059L403.706,216.698z"/>
+    </g>
+</symbol>
+<symbol id="facebook" viewBox="0 0 430.113 430.114">
+    <g>
+        <path d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+        c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+        c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"/>
+    </g>
+</symbol>
+</svg>
+
+<!--Header-->
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#" class="link__logo">Logo</a>
+            </div>
+
+            <nav class="nav">
+                <a href="#" class="nav__link">Start</a>
+                <a href="#" class="nav__link">About me</a>
+                <a href="#" class="nav__link">Work</a>
+                <a href="#" class="nav__link">Contact</a>
+            </nav>
+
+        </div>
+    </div>
+</header>
+
+<!--Intro page-->
+<section class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <div class="intro__text">
+                <h1 class="title">May I introduce myself?</h1>
+                <h2 class="subtitle">Frontend Design | UI/UX Design</h2>
+            </div>
+            <a href="#" class="btn btn--red">Go ahead</a>
+        </div>
+    </div>
+</section>
+
+<!--About-->
+<section class="about">
+    <div class="container">
+        <div class="about__me">
+            <h3 class="name">RAPHAEL LECHNER.</h3>
+            <div class="about__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</div>
+        </div>
+<!--Items-->
+       <div class="item">
+        <div class="about__item">
+            <img src="img/Icon_1.png" alt="" class="about__icon">
+            <h4 class="item__title">Sketching is fun</h4>
+            <div class="item__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea</div>
+       </div>
+
+         <div class="about__item">
+            <img src="img/Icon_2.png" alt="" class="about__icon">
+            <h4 class="item__title">Design afterwards</h4>
+            <div class="item__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea</div>
+       </div>
+
+         <div class="about__item">
+            <img src="img/Icon_3.png" alt="" class="about__icon">
+            <h4 class="item__title">Finalize</h4>
+            <div class="item__text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea</div>
+        </div>
+       </div><!--Item-->
+    </div><!--Container-->
+</section>
+
+<!--Portfolio-->
+<section class="portfolio">
+    <div class="container">
+<!--Items-->
+       <div class="portfolio__inner">
+        <div class="portfolio__items">
+           <img src="img/w_1.png" alt="" class="portfolio__photo">
+           <a href="#" class="small__btn btn--red"></a>
+           <div class="portfolio__content">
+               <h5 class="work__title">Lorem ipsum dolor sit</h5>
+               <h6 class="work__subtitle">amet consetetur sadipscing elitr</h6>
+           </div>
+        </div>
+
+        <div class="portfolio__items">
+           <img src="img/w_2.png" alt="" class="portfolio__photo">
+           <a href="#" class="small__btn btn--red"></a>
+           <div class="portfolio__content">
+               <h5 class="work__title">Lorem ipsum dolor sit</h5>
+               <h6 class="work__subtitle">amet consetetur sadipscing elitr</h6>
+           </div>
+        </div>
+
+        <div class="portfolio__items">
+           <img src="img/w_3.png" alt="" class="portfolio__photo">
+           <a href="#" class="small__btn btn--red"></a>
+           <div class="portfolio__content">
+               <h5 class="work__title">Lorem ipsum dolor sit</h5>
+               <h6 class="work__subtitle">amet consetetur sadipscing elitr</h6>
+           </div>
+        </div>
+
+        <div class="portfolio__items">
+           <img src="img/w_4.png" alt="" class="portfolio__photo">
+           <a href="#" class="small__btn btn--red"></a>
+           <div class="portfolio__content">
+               <h5 class="work__title">Lorem ipsum dolor sit</h5>
+               <h6 class="work__subtitle">amet consetetur sadipscing elitr</h6>
+           </div>
+        </div>
+     </div><!--portfolio__inner-->
+     <!--Button-->
+     <a href="#" class="other__btn btn--red">View more</a>
+
+    </div>
+</section>
+
+<!--Contact-->
+<section class="contact">
+    <div class="container">
+       <h1 class="contact__title">Get in touch!</h1>
+        <div class="contact__inner">
+            <input type="text" placeholder="Name" class="contact__input">
+            <input type="email" placeholder="E-mail" class="contact__input">
+            <textarea placeholder="How can I help you?" name="" id="" class="text__field" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+                <div class="social">
+                    <a href="#" target="_blank" class="social__item">
+                        <svg class="social__icon">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+
+                    <a href="#" target="_blank" class="social__item">
+                        <svg class="social__icon">
+                            <use xlink:href="#dribbble"></use>
+                        </svg>
+                    </a>
+
+                    <a href="#" target="_blank" class="social__item">
+                        <svg class="social__icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </div><!--social-->
+        </div><!--footer__inner-->
+    </div><!--container-->
+
+<!--Copyright-->
+<div class="copyright">
+    <div class="container">
+         <div class="about__red">
+            <div>© Raphael Lechner</div>
+            <div>Imprint</div>
+         </div>
+    </div>
+</div>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
